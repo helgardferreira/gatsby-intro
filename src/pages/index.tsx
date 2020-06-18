@@ -5,7 +5,7 @@ export default function App() {
   return (
     <>
       <h1>Home</h1>
-      <div>Hello Minnesota!</div>
+      <p>Hello Minnesota!</p>
       <Link to="/about">Learn about me &rarr;</Link>
     </>
   );

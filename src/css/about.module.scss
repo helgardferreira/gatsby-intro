@@ -1,12 +1,12 @@
 .container {
-  $white: #fff;
-  $off-white: #efefef;
+  $link: #000;
+  $link-hover: #555;
 
   a {
-    color: $off-white;
+    color: $link;
 
-    :hover {
-      color: $white;
+    &:hover {
+      color: $link-hover;
     }
   }
 }
