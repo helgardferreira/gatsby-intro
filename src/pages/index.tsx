@@ -1,5 +1,12 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 export default function App() {
-  return <div>Hello Frontend Masters!</div>;
+  return (
+    <>
+      <h1>Home</h1>
+      <div>Hello Minnesota!</div>
+      <Link to="/about">Learn about me &rarr;</Link>
+    </>
+  );
 }
