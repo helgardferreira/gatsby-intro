@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import Layout from '../components/layout';
 
-export default function App() {
-  return (
-    <>
-      <h1>Home</h1>
-      <p>Hello Minnesota!</p>
-      <Link to="/about">Learn about me &rarr;</Link>
-    </>
-  );
-}
+const Index = () => (
+  <Layout>
+    <h1>Home</h1>
+    <p>Hello Minnesota!</p>
+    <Link to="/about">Learn about me &rarr;</Link>
+  </Layout>
+);
+
+export default Index;

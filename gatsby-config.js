@@ -1,4 +1,12 @@
-// eslint-disable-next-line no-undef
+/* eslint-disable no-undef */
 module.exports = {
-  plugins: [`gatsby-plugin-typescript`, `gatsby-plugin-sass`]
+  plugins: [
+    `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require('sass')
+      }
+    }
+  ]
 };
