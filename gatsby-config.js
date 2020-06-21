@@ -27,15 +27,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/posts/`,
-      },
+        path: `${__dirname}/posts/`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/images/`,
-      },
+        path: `${__dirname}/images/`
+      }
     },
     /* {
       resolve: "gatsby-plugin-page-creator",
@@ -48,7 +48,12 @@ module.exports = {
       options: {
         defaultLayouts: {
           default: require.resolve('./src/components/layout.tsx')
-        }
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images'
+          }
+        ]
       }
     }
   ]

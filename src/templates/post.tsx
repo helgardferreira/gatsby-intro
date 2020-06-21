@@ -38,7 +38,6 @@ const PostTemplate: FunctionComponent<PageProps<IDataType>> = ({
       Posted by {post.frontmatter.author}
     </p>
     <MDXRenderer>{post.body}</MDXRenderer>
-    <p>Post body goes here</p>
     <Link to="/" className={postsStyles.readLink}>
       &larr; back to all posts
     </Link>
