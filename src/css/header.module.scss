@@ -5,7 +5,8 @@
   border-bottom: 1px solid colors.$dark;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem calc((100vw - 550px - 0.5rem) / 2);
+  padding: 0.5rem calc((100% - 550px) / 2);
+  margin-top: 0;
 
   nav {
     margin-top: 0;
@@ -17,7 +18,7 @@
     font-weight: normal;
     line-height: 1;
     margin: 0 0.5rem 0 0;
-    padding: 0.25rem;
+    padding: 0.25rem 0;
     text-decoration: none;
 
     &.current-page {

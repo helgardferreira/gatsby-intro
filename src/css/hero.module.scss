@@ -1,0 +1,41 @@
+@use 'colors';
+
+.hero {
+  background-image: url('/images/nicole-harrington-mn.jpg');
+  background-position: top 20% center;
+  background-size: cover;
+  min-height: 200px;
+  height: 30vh;
+}
+
+.hero-text {
+  background-image: linear-gradient(
+    to top,
+    fade-out(colors.$purple, 0.2) 2rem,
+    fade-out(colors.$purple, 1)
+  );
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+  padding: 0 calc((100% - 550px) / 2) 2rem;
+  width: 100%;
+
+  h1 {
+    text-shadow: 1px 1px 3px fade-out(colors.$light-purple, 0.6);
+    font-size: 2.2rem;
+  }
+
+  p,
+  a {
+    color: colors.$darker;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  a {
+    margin-top: 0.5 rem;
+  }
+}
