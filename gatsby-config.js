@@ -6,34 +6,34 @@ module.exports = {
       'A site we built together during a full-day Frontend Masters Gatsby workshop'
   },
   plugins: [
-    `gatsby-plugin-typescript`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-react-helmet',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-sass`,
+      resolve: 'gatsby-plugin-sass',
       options: {
         implementation: require('sass')
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `pages`,
+        name: 'pages',
         path: `${__dirname}/src/pages/`
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `posts`,
+        name: 'posts',
         path: `${__dirname}/posts/`
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
+        name: 'images',
         path: `${__dirname}/images/`
       }
     },
@@ -44,7 +44,7 @@ module.exports = {
       },
     }, */
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
           default: require.resolve('./src/components/layout.tsx')
@@ -54,6 +54,15 @@ module.exports = {
             resolve: 'gatsby-remark-images'
           }
         ]
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+      options: {
+        production: true,
+        disable: !process.env.ANALYZE_BUNDLE_SIZE,
+        generateStatsFile: true,
+        analyzerMode: 'static'
       }
     }
   ]

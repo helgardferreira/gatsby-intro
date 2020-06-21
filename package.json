@@ -10,7 +10,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "analyze": "cross-env ANALYZE_BUNDLE_SIZE=true gatsby build"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.6",
@@ -27,6 +28,7 @@
     "gatsby-plugin-sass": "^2.3.4",
     "gatsby-plugin-sharp": "^2.6.12",
     "gatsby-plugin-typescript": "^2.4.6",
+    "gatsby-plugin-webpack-bundle-analyzer": "^1.0.5",
     "gatsby-remark-images": "^3.3.11",
     "gatsby-source-filesystem": "^2.3.12",
     "gatsby-transformer-sharp": "^2.5.5",
