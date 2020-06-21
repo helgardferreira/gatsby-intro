@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import PostPreview from '../components/post-preview';
 import Hero from '../components/hero';
