@@ -11,7 +11,7 @@ interface ISiteQuery {
   };
 }
 
-const useSiteMetadata = () => {
+const useSiteMetadata = (): ISiteMetadata => {
   const data: ISiteQuery = useStaticQuery(graphql`
     query {
       site {

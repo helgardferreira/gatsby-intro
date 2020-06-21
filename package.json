@@ -20,6 +20,7 @@
     "@types/react-dom": "^16.9.8",
     "gatsby": "^2.23.4",
     "gatsby-plugin-mdx": "^1.2.16",
+    "gatsby-plugin-page-creator": "^2.3.10",
     "gatsby-plugin-react-helmet": "^3.3.4",
     "gatsby-plugin-sass": "^2.3.4",
     "gatsby-plugin-typescript": "^2.4.6",

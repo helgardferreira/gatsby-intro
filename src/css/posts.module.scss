@@ -1,3 +1,31 @@
+@use 'colors';
+
+.post-preview {
+  border-bottom: 1px solid colors.$light;
+  margin-top: 0.75rem;
+  padding-bottom: 1rem;
+
+  h3 a {
+    color: colors.$dark-blue;
+    text-decoration: none;
+  }
+
+  &:first-of-type {
+    margin-top: 1rem;
+  }
+}
+
+.post-author {
+  font-size: 0.75rem;
+}
+
+.read-link {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: colors.$blue;
+}
+
 .wave {
   background: rebeccapurple;
   border: none;

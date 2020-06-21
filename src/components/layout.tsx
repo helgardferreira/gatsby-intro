@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from 'react';
-import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import Header from './header';
 import useSiteMetadata from '../hooks/use-sitemetadata';
@@ -20,10 +19,6 @@ const Layout: FunctionComponent = ({ children }) => {
       <main className={mainStyles.main}>{children}</main>
     </>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.any.isRequired
 };
 
 export default Layout;
