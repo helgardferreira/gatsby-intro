@@ -45,8 +45,6 @@ const Hero: FunctionComponent = () => {
     }
   `);
 
-  console.log(JSON.stringify(image.sharp.fluid, null, 2));
-
   return (
     <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn="soft">
       <TextBox>

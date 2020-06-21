@@ -1,8 +1,16 @@
 import { graphql, useStaticQuery } from 'gatsby';
+import { FluidObject } from 'gatsby-image';
+
+interface IFluidImage {
+  sharp: {
+    fluid: FluidObject;
+  };
+}
 
 export interface IPost {
   author: string;
   excerpt: string;
+  image: IFluidImage;
   title: string;
   slug: string;
 }
@@ -10,6 +18,7 @@ export interface IPost {
 interface IRawPost {
   frontmatter: {
     author: string;
+    image: IFluidImage;
     title: string;
     slug: string;
   };
@@ -30,6 +39,16 @@ const usePosts = (): IPost[] => {
         nodes {
           frontmatter {
             author
+            image {
+              sharp: childImageSharp {
+                fluid(
+                  maxWidth: 100
+                  maxHeight: 100
+                ) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
             title
             slug
           }
@@ -47,9 +66,10 @@ const usePosts = (): IPost[] => {
         !!author && !!title && !!slug
     )
     .map(
-      ({ excerpt, frontmatter: { author, title, slug } }): IPost => ({
+      ({ excerpt, frontmatter: { author, image, title, slug } }): IPost => ({
         author,
         excerpt,
+        image,
         title,
         slug
       })

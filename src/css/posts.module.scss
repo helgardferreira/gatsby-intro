@@ -2,7 +2,7 @@
 
 .post-preview {
   border-bottom: 1px solid colors.$light;
-  margin-top: 0.75rem;
+  display: flex;
   padding-bottom: 1rem;
 
   h3 a {
@@ -10,8 +10,30 @@
     text-decoration: none;
   }
 
+  h4 {
+    font-size: 0.8rem;
+  }
+
   &:first-of-type {
     margin-top: 1rem;
+  }
+
+  p {
+    margin-top: 6px;
+  }
+
+  p + a {
+    margin-top: 4px;
+  }
+}
+
+.preview-image {
+  margin: 1rem 1rem 0 0;
+  width: 100px;
+
+  img {
+    border-radius: 4px;
+    margin-top: 0;
   }
 }
 
